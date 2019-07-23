@@ -10,7 +10,7 @@ function main (subcmd, options) {
   const id = options._args[0];
   const nvd = new NVD();
   const config = nvd.getConfig();
-  const bar = new ProgressBar('syncing [:bar]', config.feeds.length);
+  const bar = new ProgressBar('Syncing NIST Feeds [:bar]', config.feeds.length);
 
   if (options.nosync) {
     return nvd.search(id);
@@ -21,7 +21,9 @@ function main (subcmd, options) {
       process.exitCode = 1;
       return console.error(error);
     }
-    nvd.search(id);
+    nvd.search(id, () => {
+      
+    });
   }, () => {
     bar.tick();
   });

@@ -25,5 +25,6 @@ app.addCmd = (cmd) => {
 };
 
 app.addCmd('search');
+app.addCmd('sync');
 
 module.exports = app;

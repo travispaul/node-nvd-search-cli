@@ -7,9 +7,16 @@
   "author": "Travis Paul <tr@vispaul.me>",
   "license": "BSD-2-Clause",
   "private": false,
+  "scripts": {
+    "lint": "jshint *.js bin/*"
+  },
+
   "dependencies": {
     "cmdln": "^4.4.0",
     "nvd": "git+ssh://git@github.com/travispaul/node-nvd",
     "progress": "^2.0.3"
+  },
+  "devDependencies": {
+    "jshint": "^2.10.2"
   }
 }
