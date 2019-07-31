@@ -45,3 +45,7 @@ Usage:
 Options:
     -v, --verbose   Write more info to stdout.
 ```
+
+## See also
+
+- [nvd-search](https://github.com/travispaul/node-nvd-search)
