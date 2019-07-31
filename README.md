@@ -1,9 +1,9 @@
 # node-nvd-search-cli
-(Unofficial) program to search a local cache fo the NIS National Vulnerability Database.
+(Unofficial) program to search a local cache of the NIS National Vulnerability Database.
 
 ```
 $ ./bin/nvd
-(Unofficial) program to search a local cache fo the NIS National Vulnerability Database.
+(Unofficial) program to search a local cache of the NIS National Vulnerability Database.
 
 Usage:
     nvd [OPTIONS] COMMAND [ARGS...]

@@ -1,7 +1,7 @@
 {
   "name": "nvd-search-cli",
   "version": "1.0.0",
-  "description": "(Unofficial) program to search a local cache fo the NIS National Vulnerability Database.",
+  "description": "(Unofficial) program to search a local cache of the NIS National Vulnerability Database.",
   "main": "bin/nvd",
   "repository": "git@github.com:travispaul/node-nvd-cli.git",
   "author": "Travis Paul <tr@vispaul.me>",
