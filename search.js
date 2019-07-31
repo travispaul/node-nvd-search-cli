@@ -28,7 +28,7 @@ function main (subcmd, options) {
       return;
     }
     if (options.json) {
-      console.log(JSON.stringify(results, null, options.pretty ? 2 : null));
+      console.log(JSON.stringify(results.data, null, options.pretty ? 2 : null));
     } else {
       // show as something more machine readable?
       console.log(results);
