@@ -1,5 +1,5 @@
 {
-  "name": "node-nvd-cli",
+  "name": "nvd-search-cli",
   "version": "1.0.0",
   "description": "(Unofficial) program to search a local cache fo the NIS National Vulnerability Database.",
   "main": "bin/nvd",
