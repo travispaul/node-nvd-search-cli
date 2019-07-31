@@ -1,8 +1,7 @@
-const NVD = require('nvd');
+const NVD = require('nvd-search');
 const ProgressBar = require('progress');
 
 function main (subcmd, options) {
-
   const nvd = new NVD();
   const config = nvd.getConfig();
   const bar = new ProgressBar('Syncing NIST Feeds [:bar]', config.feeds.length);
@@ -11,6 +10,11 @@ function main (subcmd, options) {
     if (error) {
       process.exitCode = 1;
       return console.error(error);
+    }
+    if (options.verbose) {
+      results.forEach((feed) => {
+        console.log('%s [%s]', feed.feed, feed.fetchRemote ? 'updated' : 'ok');
+      });
     }
   }, () => {
     bar.tick();

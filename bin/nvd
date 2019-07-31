@@ -5,17 +5,17 @@ const cmdln = require('cmdln');
 const app = require('../index.js');
 
 function App () {
-   app.name = 'nvd';
-   app.desc = app.description;
-   cmdln.Cmdln.call(this, app);
+  app.name = 'nvd';
+  app.desc = app.description;
+  cmdln.Cmdln.call(this, app);
 }
 
 util.inherits(App, cmdln.Cmdln);
 
 app.cmdList.forEach((cmd) => {
-   App.prototype[`do_${cmd}`] = app[cmd].main;
-   App.prototype[`do_${cmd}`].help = app[cmd].help;
-   App.prototype[`do_${cmd}`].options = app[cmd].options;
+  App.prototype[`do_${cmd}`] = app[cmd].main;
+  App.prototype[`do_${cmd}`].help = app[cmd].help;
+  App.prototype[`do_${cmd}`].options = app[cmd].options;
 });
 
 cmdln.main(new App());

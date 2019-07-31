@@ -8,15 +8,15 @@
   "license": "BSD-2-Clause",
   "private": false,
   "scripts": {
-    "lint": "jshint *.js bin/*"
+    "lint": "jshint *.js bin/* && eslint *.js"
   },
-
   "dependencies": {
     "cmdln": "^4.4.0",
-    "nvd": "git+ssh://git@github.com/travispaul/node-nvd",
+    "nvd-search": "^1.0.0",
     "progress": "^2.0.3"
   },
   "devDependencies": {
+    "eslint": "^6.1.0",
     "jshint": "^2.10.2"
   }
 }
