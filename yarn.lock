@@ -32,9 +32,9 @@ acorn-jsx@^5.0.2:
   integrity sha512-tMUqwBWfLFbJbizRmEcWSLw6HnFzfdJs2sOJEOwwtVPMoH/0Ay+E703oZz78VSXZiiDcZrQ5XKjPIUQixhmgVw==
 
 acorn@^7.0.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.1.0.tgz#949d36f2c292535da602283586c2477c57eb2d6c"
-  integrity sha512-kL5CuoXA/dgxlBbVrflsflzQ3PAas7RYZB52NOm/6839iVYJgKMJ3cQJD+t2i5+qFa8h3MDpEOJiS64E8JLnSQ==
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.1.1.tgz#e35668de0b402f359de515c5482a1ab9f89a69bf"
+  integrity sha512-add7dgA5ppRPxCFJoAGfMDi7PIBXq1RtGo7BhbLaxwrXPOmw8gq48Y9ozT01hUKy9byMjlR20EJhu5zlkErEkg==
 
 ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.5:
   version "6.10.2"
@@ -832,10 +832,10 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-nvd-search@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/nvd-search/-/nvd-search-1.1.2.tgz#5842b1f535d391f8ea1e4cc5148eb37dd917bcc8"
-  integrity sha512-dYTR2moX89oWewLZ83SySt8f2cVTwVvpK0rUrWnz15IMeTRcNGd+mlT7ijwwpteal2XF75P5UqX6SJYdmOlraw==
+nvd-search@^1.1.3:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/nvd-search/-/nvd-search-1.2.1.tgz#9eec250400f0c586c59e9b8267bb417a24208ecb"
+  integrity sha512-tzLFyrRjCqcYx/F0fNiQ1YEEl7Yd0CC4NEXyC+0RZF7uQQ5joRRjhQonFkoURQWzS9n8jWlUA6ufjjSTvtCOAQ==
   dependencies:
     JSONStream "^1.3.5"
     request "^2.88.0"
