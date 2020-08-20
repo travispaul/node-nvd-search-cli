@@ -26,13 +26,13 @@ Search for a CVE by ID.
 Usage:
   nvd search [CVE ID]
 Options:
-    -n, --nosync       Do not fetch remote meta files and attempt a sync
-                       operation.
-    -j, --json         Print results as JSON to stdout.
-    -p, --pretty       Pretty print JSON.
-    -t NUM, --ttl=NUM  How many seconds to consider the local cache fresh before
-                       checking the remote feeds (default: 3600).
-    -v, --verbose      Write more info to stdout.
+    -n, --nosync         Do not fetch remote meta files and attempt a sync
+                         operation.
+    -j, --json           Print results as JSON to stdout.
+    -p, --pretty         Pretty print JSON.
+    -a, --all            Sync all original files.
+    -l NUM, --limit=NUM  How many files to fetch at once (default: 2).
+    -v, --verbose        Write more info to stdout.
 ```
 
 ## sync
@@ -43,7 +43,9 @@ Sync the remote feeds.
 Usage:
   nvd sync
 Options:
-    -v, --verbose   Write more info to stdout.
+    -a, --all            Sync all original files.
+    -l NUM, --limit=NUM  How many files to fetch at once (default: 2).
+    -v, --verbose        Write more info to stdout.
 ```
 
 ## See also
@@ -53,7 +55,7 @@ Options:
 ## Example
 
 ```
-./bin/nvd search -njp CVE-2019-12780
+$ ./bin/nvd search -jp CVE-2019-12780
 {
   "cve": {
     "data_type": "CVE",
@@ -62,30 +64,6 @@ Options:
     "CVE_data_meta": {
       "ID": "CVE-2019-12780",
       "ASSIGNER": "cve@mitre.org"
-    },
-    "affects": {
-      "vendor": {
-        "vendor_data": [
-          {
-            "vendor_name": "belkin",
-            "product": {
-              "product_data": [
-                {
-                  "product_name": "crock-pot_smart_slow_cooker_with_wemo_firmware",
-                  "version": {
-                    "version_data": [
-                      {
-                        "version_value": "-",
-                        "version_affected": "="
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      }
     },
     "problemtype": {
       "problemtype_data": [
@@ -194,5 +172,4 @@ Options:
   "publishedDate": "2019-06-10T16:29Z",
   "lastModifiedDate": "2019-06-17T13:24Z"
 }
-
 ```

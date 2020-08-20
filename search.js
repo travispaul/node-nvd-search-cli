@@ -9,7 +9,8 @@ function main (subcmd, options) {
   }
   const id = options._args[0];
   const nvd = new NVD({
-    ttl: options.ttl || 3600
+    fetchLimit: (options.limit) ? parseInt(options.limit) : 2,
+    persistAll: (options.all) ? true : false,
   });
   const config = nvd.getConfig();
   let progressCallback;
@@ -72,9 +73,14 @@ module.exports = {
       help: 'Pretty print JSON'
     },
     {
-      names: ['ttl', 't'],
+      names: ['all', 'a'],
+      type: 'bool',
+      help: 'Sync all original files'
+    },
+    {
+      names: ['limit', 'l'],
       type: 'number',
-      help: 'How many seconds to consider the local cache fresh before checking the remote feeds (default: 3600)'
+      help: 'How many files to fetch at once (default: 2)'
     }
   ],
   help: `Search for a CVE by ID.

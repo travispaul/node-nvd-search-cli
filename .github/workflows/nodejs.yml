@@ -4,13 +4,10 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: macos-latest
-
     strategy:
       matrix:
         node-version: [10.x, 12.x]
-
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
@@ -20,4 +17,4 @@ jobs:
     - name: yarn install and smoketest
       run: |
         yarn
-        ./bin/nvd
+        ./bin/nvd sync -a
