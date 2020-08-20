@@ -2,11 +2,26 @@ const NVD = require('nvd-search');
 const ProgressBar = require('progress');
 
 function main (subcmd, options) {
-  const nvd = new NVD({
-    fetchLimit: (options.limit) ? parseInt(options.limit) : 2,
-    persistAll: (options.all) ? true : false,
-  });
-  const config = nvd.getConfig();
+  let config = {};
+
+  if (options.limit) {
+    config.fetchLimit = parseInt(options.limit);
+  }
+
+  if (options.all) {
+    config.persistAll = true;
+  }
+
+  if (options.schema) {
+    config.schemaVersion = options.schema;
+  }
+
+  if (options.dir) {
+    config.cacheDir = options.dir;
+  }
+
+  const nvd = new NVD(config);
+  config = nvd.getConfig();
   const bar = new ProgressBar('Syncing NIST Feeds [:bar]', config.feeds.length);
 
   nvd.sync((error, results) => {
@@ -37,6 +52,16 @@ module.exports = {
       type: 'number',
       help: 'How many files to fetch at once (default: 2)'
     },
+    {
+      names: ['schema', 's'],
+      type: 'string',
+      help: 'Feed schema version (1.0, 1.1)'
+    },
+    {
+      names: ['dir', 'd'],
+      type: 'string',
+      help: 'Local cache directory.'
+    }
   ],
   help: `Sync the remote feeds.
 Usage:

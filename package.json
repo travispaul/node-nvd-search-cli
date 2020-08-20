@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "cmdln": "^4.4.0",
-    "nvd-search": "^2.0.0",
+    "nvd-search": "^2.0.1",
     "progress": "^2.0.3"
   },
   "devDependencies": {
