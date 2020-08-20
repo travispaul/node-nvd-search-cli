@@ -1,4 +1,5 @@
-# node-nvd-search-cli
+# nvd-search-cli ![Node CI](https://github.com/travispaul/node-nvd-search-cli/workflows/Node%20CI/badge.svg)
+
 (Unofficial) program to search a local cache of the NIS National Vulnerability Database.
 
 ```

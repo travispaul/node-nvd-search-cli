@@ -17,4 +17,5 @@ jobs:
     - name: yarn install and smoketest
       run: |
         yarn
+        yarn lint
         ./bin/nvd sync -a
