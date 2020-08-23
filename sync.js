@@ -22,7 +22,7 @@ function main (subcmd, options) {
 
   const nvd = new NVD(config);
   config = nvd.getConfig();
-  const bar = new ProgressBar('Syncing NIST Feeds [:bar]', config.feeds.length);
+  const bar = new ProgressBar(`Syncing NIST ${config.schemaVersion} Feed [:bar]`, config.feeds.length);
 
   nvd.sync((error, results) => {
     if (error) {
