@@ -27,8 +27,8 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
           architecture: ${{ matrix.architecture }}
-    - name: yarn install, lint, and smoketest
-      run: |
-        yarn
-        yarn lint
-        ./bin/nvd sync -a
+      - name: yarn install, lint, and smoketest
+        run: |
+          yarn
+          yarn lint
+          ./bin/nvd sync -a
