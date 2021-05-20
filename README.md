@@ -1,8 +1,8 @@
-# nvd-search-cli ![Node CI](https://github.com/travispaul/node-nvd-search-cli/workflows/Node%20CI/badge.svg)
+# nvd-search-cli [![Lint](https://github.com/travispaul/node-nvd-search-cli/actions/workflows/lint.yml/badge.svg)](https://github.com/travispaul/node-nvd-search-cli/actions/workflows/lint.yml)
 
 (Unofficial) program to search a local cache of the NIST National Vulnerability Database.
 
-```sh
+```
 $ ./bin/nvd
 (Unofficial) program to search a local cache of the NIST National Vulnerability Database.
 
@@ -21,7 +21,7 @@ Commands:
 
 ## search
 
-```sh
+```
 $ ./bin/nvd help search
 Search for a CVE by ID.
 Usage:
@@ -38,7 +38,7 @@ Options:
 
 ## sync
 
-```sh
+```
 $ ./bin/nvd help sync
 Sync the remote feeds.
 Usage:
