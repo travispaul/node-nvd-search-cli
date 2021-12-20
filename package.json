@@ -1,6 +1,6 @@
 {
   "name": "nvd-search-cli",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "(Unofficial) program to search a local cache of the NIST National Vulnerability Database.",
   "main": "bin/nvd",
   "repository": "git@github.com:travispaul/node-nvd-cli.git",
