@@ -1,3 +1,9 @@
+# Archived
+
+This project has been superseded by: https://github.com/travispaul/nvd_cve
+
+----
+
 # nvd-search-cli [![Lint](https://github.com/travispaul/node-nvd-search-cli/actions/workflows/lint.yml/badge.svg)](https://github.com/travispaul/node-nvd-search-cli/actions/workflows/lint.yml)
 
 (Unofficial) program to search a local cache of the NIST National Vulnerability Database.
